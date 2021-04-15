@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
@@ -8,7 +7,7 @@ export default function useAuth(code) {
     const [expiresIn, setExpiresIn] = useState()
 
     useEffect(() => {
-        axios.post('http://localhost:3001/login', {
+        axios.post('http://10.0.0.58:3001/login', {
             code
         }).then((response) => {
             setAccessToken(response.data.accessToken)
@@ -16,7 +15,8 @@ export default function useAuth(code) {
             setExpiresIn(response.data.expiresIn)
             window.history.pushState({}, null, "/")
         }).catch(err => {
-            window.location = "/"
+            console.log(err);
+            // window.location = "/"
         })
     }, [code])
 
@@ -24,7 +24,7 @@ export default function useAuth(code) {
         if (!refreshToken || !expiresIn)
             return;
         const timeout = setInterval(() => {
-            axios.post('http://localhost:3001/refresh', {
+            axios.post('http://10.0.0.58:3001/refresh', {
                 refreshToken
             }).then((response) => {
                 setAccessToken(response.data.accessToken)
