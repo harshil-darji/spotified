@@ -4,10 +4,10 @@
 
 ## Spotify clone using React
 
-Spotified uses the Spotify api. To use the app, create a ```.env``` file and put in the server folder. It has to include 3 parameters:
+Spotified uses the Spotify api. To use the app, create a ```.env``` file and put it in both, server and client folders. It has to include 3 parameters:
 
-1.  REDIRECT_URI
-2.  CLIENT_ID
-3.  CLIENT_SECRET
+1.  REACT_REDIRECT_URI
+2.  REACT_CLIENT_ID
+3.  REACT_CLIENT_SECRET
 
 Later, use ```npm start``` in both the client and server folders to bootstrap the website.
