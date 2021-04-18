@@ -7,7 +7,7 @@ export default function useAuth(code) {
     const [expiresIn, setExpiresIn] = useState()
 
     useEffect(() => {
-        axios.post('http://10.0.0.58:3001/login', {
+        axios.post(`${process.env.REACT_APP_SERVER_HOST_URL}/login`, {
             code
         }).then((response) => {
             setAccessToken(response.data.accessToken)
@@ -24,7 +24,7 @@ export default function useAuth(code) {
         if (!refreshToken || !expiresIn)
             return;
         const timeout = setInterval(() => {
-            axios.post('http://10.0.0.58:3001/refresh', {
+            axios.post(`${process.env.REACT_APP_SERVER_HOST_URL}/refresh`, {
                 refreshToken
             }).then((response) => {
                 setAccessToken(response.data.accessToken)
