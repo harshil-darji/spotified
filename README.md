@@ -2,7 +2,7 @@
 
 ![spotified](https://user-images.githubusercontent.com/41537302/114931668-60b0b180-9deb-11eb-89b5-8ed406f01e9c.png)
 
-## Spotify clone using React
+## Search and Play songs on Spotify
 
 Spotified uses the Spotify api. To use the app, edit a ```.env.example``` file in both client and server folders and rename it to `.env`. It has to include below mentioned parameters respectively.:
 
