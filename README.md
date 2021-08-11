@@ -1,10 +1,17 @@
 # Spotified
 
-![spotified](https://user-images.githubusercontent.com/41537302/114931668-60b0b180-9deb-11eb-89b5-8ed406f01e9c.png)
-
 ## Search and Play songs on Spotify
 
-Spotified uses the Spotify api. To use the app, edit a ```.env.example``` file in both client and server folders and rename it to `.env`. It has to include below mentioned parameters respectively.:
+Spotified lets you play Spotify on your signed in devices and shows the lyrics of currently playing song. Sign in with your Spotify credentials and enjoy!
+
+![spotified](https://user-images.githubusercontent.com/41537302/129008458-b7e013a3-b659-4d4a-8cd0-8adfb555653d.gif)
+
+
+## Configuration
+
+Spotified uses the Spotify api. The client and server both need to be configured before starting. 
+
+To use the app, edit a ```.env.example``` file in both client and server folders and rename it to `.env`. It has to include below mentioned parameters respectively.:
 
 - <strong>Client</strong>
 ```
